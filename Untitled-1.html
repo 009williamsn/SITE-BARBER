@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Raizes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1><b style="font-size: 36px;">Barbearia Raizes</b></h1>
+    </header>
+    <main>
+        <section id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#register"><b>Cadastro de Clientes</b></a></li>
+                    <li><a href="#qr-code"><b>Compartilhe e Cadastre Online!</b></a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="content">
+            <section id="register">
+                <h2><b>Cadastro de Clientes</b></h2>
+                <form id="register-form">
+                    <label for="name"><b>Nome:</b></label>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="phone"><b>Telefone:</b></label>
+                    <input type="tel" id="phone" name="phone"><br><br>
+                    <label for="schedule"><b>Horário:</b></label>
+                    <input type="datetime-local" id="schedule" name="schedule"><br><br>
+                    <label for="haircut"><b>Corte:</b></label>
+                    <select id="haircut" name="haircut">
+                        <option value="militar"><b>Militar (R$ 15,00)</b></option>
+                        <option value="degradê"><b>Degradê (R$ 18,00)</b></option>
+                        <option value="navalhado"><b>Navalhado (R$ 20,00)</b></option>
+                        <option value="social"><b>Social (R$ 25,00)</b></option>
+                        <option value="moicano"><b>Moicano (R$ 25,00)</b></option>
+                    </select><br><br>
+                    <button type="submit"><b>Cadastrar</b></button>
+                    <button type="button" id="cancel"><b>Cancelar</b></button>
+                </form>
+            </section>
+            <section id="client-list">
+                <h2><b>Clientes Agendados</b></h2>
+                <div id="client-list-container">
+                    <ul id="client-list">
+                        <!-- client list will be generated here -->
+                    </ul>
+                </div>
+            </section>
+            <section id="qr-code">
+                <h2><b>Compartilhe e Cadastre Online!</b></h2>
+                <img src="qr-code.png" alt="QR Code">
+            </section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
